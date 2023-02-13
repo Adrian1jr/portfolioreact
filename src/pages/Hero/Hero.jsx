@@ -5,6 +5,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { logo, avatar, singleicon } from "../../assets/barrelimg";
 import "./hero.css";
 
+//dynamic nav
 const navigation = [
   { name: "Inicio", href: "" },
   { name: "Sobre Mi", href: "" },
