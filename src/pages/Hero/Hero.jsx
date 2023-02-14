@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Link } from "react-scroll";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { logo, avatar, singleicon } from "../../assets/barrelimg";
+import { logo, avatar, singleicon, cv } from "../../assets/barrelimg";
 import "./hero.css";
 
 //dynamic nav
 const navigation = [
   { name: "Inicio", href: "" },
   { name: "Sobre Mi", href: "" },
-  { name: "Servicios", href: "" },
+  { name: "Servicios", href: "services" },
   { name: "Proyectos", href: "projects" },
   { name: "Habilidades", href: "" },
 ];
@@ -29,7 +29,7 @@ export default function Hero() {
           <div className="flex lg:hidden">
             <button
               type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 transition-all"
               onClick={() => setMobileMenuOpen(true)}
             >
               <span className="sr-only">Open main menu</span>
@@ -41,9 +41,8 @@ export default function Hero() {
               <Link
                 to={item.href}
                 smooth={true}
-                duration={500}
                 key={item.name}
-                className="text-sm font-semibold leading-6 text-gray-900"
+                className="text-sm font-semibold leading-6 text-gray-900 cursor-pointer"
               >
                 {item.name}
               </Link>
@@ -82,13 +81,16 @@ export default function Hero() {
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
                   {navigation.map((item) => (
-                    <a
+                    <Link
+                      to={item.href}
+                      smooth={true}
                       key={item.name}
                       className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
                       href={item.href}
+                      onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -119,13 +121,31 @@ export default function Hero() {
                   Contactame
                 </a>
                 <a
-                  href="#"
+                  href={cv}
+                  download="cv.pdf"
                   className="rounded-md bg-indigo-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
                   Descargar CV
                 </a>
               </div>
             </div>
+            {/* Scroll down */}
+            <Link
+              to="services"
+              smooth={true}
+              aria-label="Scroll down"
+              className="flex items-center justify-center w-10 h-10 mx-auto text-gray-600 hover:text-deep-purple-accent-400 hover:border-deep-purple-accent-400 duration-300 transform border border-gray-400 rounded-full hover:shadow hover:scale-110 cursor-pointer sm:mt-12 mt-10"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="currentColor"
+              >
+                <path d="M10.293,3.293,6,7.586,1.707,3.293A1,1,0,0,0,.293,4.707l5,5a1,1,0,0,0,1.414,0l5-5a1,1,0,1,0-1.414-1.414Z" />
+              </svg>
+            </Link>
           </div>
         </div>
       </main>

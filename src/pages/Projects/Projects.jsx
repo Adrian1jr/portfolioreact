@@ -5,7 +5,7 @@ import {
   pokedex,
   calculator,
   asisst,
-  conversion,
+  ascar,
 } from "../../assets/barrelimg";
 
 export default function Projects() {
@@ -26,7 +26,7 @@ export default function Projects() {
       link: "",
     },
     {
-      title: "Tienda Online",
+      title: "Tec Shop",
       description: `App de tienda online hecha en Angular JS con carrito de compras y
       checkout.`,
       image: geekoshop,
@@ -50,10 +50,10 @@ export default function Projects() {
       link: "",
     },
     {
-      title: "Herramienta De Conversión",
-      description: `Herramienta de conversión de unidades de medida y conversión de
-      monedas.`,
-      image: conversion,
+      title: "Ascar Sistemas",
+      description: `Pagina Web de Ascar Sistemas, empresa dedicada a la venta de
+      productos de informática y sistemas.`,
+      image: ascar,
       percentage: "0%",
       link: "",
     },
