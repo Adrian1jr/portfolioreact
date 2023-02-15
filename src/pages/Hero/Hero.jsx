@@ -137,7 +137,7 @@ export default function Hero() {
             </div>
             {/* Scroll down */}
             <Link
-              to="about"
+              to="services"
               smooth={true}
               aria-label="Scroll down"
               className="flex items-center justify-center w-10 h-10 mx-auto text-gray-600 hover:text-deep-purple-accent-400 hover:border-deep-purple-accent-400 duration-300 transform border border-gray-400 rounded-full hover:shadow hover:scale-110 cursor-pointer sm:mt-12 mt-10"
