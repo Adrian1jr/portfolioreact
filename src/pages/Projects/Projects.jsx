@@ -20,7 +20,7 @@ export default function Projects() {
     },
     {
       title: "Pokedex",
-      description: `La pokedex es un sistema de registro de pokemones, donde puedes encontrar información de cada uno de ellos.`,
+      description: `Pokedex creada con react para visualizar todos los pokemons y ver sus todos sus movimientos.`,
       image: pokedex,
       percentage: "0%",
       link: "",
@@ -67,8 +67,8 @@ export default function Projects() {
             <span className="block text-indigo-700">Mis Proyectos</span>
           </h2>
           <p className="text-l mt-4 max-w-lg mx-auto text-black">
-            Aqui podras observar algunos de mis proyectos mas recientes y
-            tambien mas antiguos.
+            Aquí podrás observar algunos de mis proyectos más recientes y
+            también más antiguos.
           </p>
         </div>
       </div>

@@ -3,6 +3,7 @@ import { Dialog } from "@headlessui/react";
 import { Link } from "react-scroll";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { logo, avatar, singleicon, cv } from "../../assets/barrelimg";
+import ContactModal from "../../components/ContactModal/ContactModal";
 import "./hero.css";
 
 //dynamic nav
@@ -16,6 +17,8 @@ const navigation = [
 
 export default function Hero() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showMyModal, setShowMyModal] = useState(false);
+  const handleOnClose = () => setShowMyModal(false);
 
   return (
     <div className="isolate min-h-screen">
@@ -100,7 +103,7 @@ export default function Hero() {
       </div>
       <main>
         <div className="relative px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+          <div className="mx-auto max-w-2xl py-24 sm:py-24 lg:py-40">
             <div className="mb-8 flex justify-center">
               <img src={avatar} alt="avatar" />
             </div>
@@ -109,29 +112,32 @@ export default function Hero() {
                 Hola, Soy Adrian Tapia Herrera
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                Front End Developer apasionado por la tecnología, me gusta
-                trabajar del lado del cliente, crear interfaces de usuario
-                atractivas y funcionales.
+                Front End Developer apasionado por la tecnología y la creación
+                de interfaces de usuario atractivas y funcionales.
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
-                <a
-                  href="#"
+                <button
                   className="rounded-md bg-indigo-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  type="button"
+                  onClick={() => setShowMyModal(true)}
                 >
                   Contactame
-                </a>
+                </button>
+
+                <ContactModal visible={showMyModal} onClose={handleOnClose} />
+
                 <a
                   href={cv}
-                  download="cv.pdf"
+                  target="_blank"
                   className="rounded-md bg-indigo-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
-                  Descargar CV
+                  Ver CV
                 </a>
               </div>
             </div>
             {/* Scroll down */}
             <Link
-              to="services"
+              to="about"
               smooth={true}
               aria-label="Scroll down"
               className="flex items-center justify-center w-10 h-10 mx-auto text-gray-600 hover:text-deep-purple-accent-400 hover:border-deep-purple-accent-400 duration-300 transform border border-gray-400 rounded-full hover:shadow hover:scale-110 cursor-pointer sm:mt-12 mt-10"

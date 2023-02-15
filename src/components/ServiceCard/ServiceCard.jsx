@@ -25,7 +25,7 @@ export default function ServiceCard({ title, description, icon }) {
         aria-label=""
         className="inline-flex items-center font-semibold transition-colors duration-200 text-indigo-600"
       >
-        Leer mas
+        Leer más
       </a>
     </div>
   );

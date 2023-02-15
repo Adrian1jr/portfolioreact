@@ -9,7 +9,7 @@ export default function Services() {
     },
     {
       title: "Paginas Web",
-      description: `Desarollo de paginas web desde landing page hasta paginas mas estructuradas.`,
+      description: `Desarrollo de paginas web desde landing page hasta páginas más estructuradas.`,
       icon: "",
     },
     {
@@ -19,13 +19,13 @@ export default function Services() {
     },
     {
       title: "Mantenimiento De PC",
-      description: `Mantenimiento de PC, instalacion de programas, etc.`,
+      description: `Mantenimiento de PC, instalación de programas, etc.`,
       icon: "",
     },
   ];
   return (
     <div
-      className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+      className="px-4 py-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
       id="services"
     >
       <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
@@ -35,37 +35,11 @@ export default function Services() {
           </p>
         </div>
         <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
-          <span className="relative inline-block">
-            <svg
-              viewBox="0 0 52 24"
-              fill="currentColor"
-              className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
-            >
-              <defs>
-                <pattern
-                  id="18302e52-9e2a-4c8e-9550-0cbb21b38e55"
-                  x="0"
-                  y="0"
-                  width=".135"
-                  height=".30"
-                >
-                  <circle cx="1" cy="1" r=".7" />
-                </pattern>
-              </defs>
-              <rect
-                fill="url(#18302e52-9e2a-4c8e-9550-0cbb21b38e55)"
-                width="52"
-                height="24"
-              />
-            </svg>
-            <span className="relative">Los</span>
-          </span>{" "}
-          Servicios mas confiables y de calidad
+          Servicios De Alta Calidad Con Las Mejores Tecnologías
         </h2>
         <p className="text-base text-gray-700 md:text-lg">
-          Cuento con diversos servicios para ofrecer, desde el diseño de paginas
-          web, hasta el desarrollo de aplicaciones web y mantenimiento de
-          equipos.
+          Cuento con diversos servicios desde el diseño y desarollo de paginas o
+          aplicaciones web y mantenimiento de equipos.
         </p>
       </div>
       <div className="grid gap-4 row-gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -81,7 +55,7 @@ export default function Services() {
 
       <div className="max-w-xl md:mx-auto sm:text-center lg:max-w-2xl pt-12">
         <h2 className="max-w-lg font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto text-center mx-auto pt-10">
-          Caracteristicas Especiales
+          Características Especiales
         </h2>
       </div>
       <div className="flex-wrap items-center justify-center gap-8 text-center sm:flex mb-12">
@@ -105,7 +79,7 @@ export default function Services() {
           </h3>
           <p className="py-4 text-gray-500 text-md dark:text-gray-300">
             Abarcando la tecnología de diseño de sitios web con HTML, CSS, JS,
-            contando tambien con el uso de frameworks y librerias CSS.
+            contando también con el uso de frameworks y librerías CSS.
           </p>
         </div>
         <div className="w-full px-4 py-4 mt-6 bg-white rounded-lg shadow-lg sm:w-1/2 md:w-full lg:w-1/4 sm:mt-16 md:mt-20 lg:mt-24 dark:bg-gray-800">
@@ -128,7 +102,7 @@ export default function Services() {
           </h3>
           <p className="py-4 text-gray-500 text-md dark:text-gray-300">
             Comparta mensajes de marca relevantes, atractivos e inspiradores
-            para crear una conexión con tu audiencia.
+            para crear una conexión con su audiencia.
           </p>
         </div>
         <div className="w-full px-4 py-4 mt-6 bg-white rounded-lg shadow-lg sm:w-1/2 md:w-full lg:w-1/4 dark:bg-gray-800">
@@ -150,8 +124,8 @@ export default function Services() {
             SEO Y Marketing
           </h3>
           <p className="py-4 text-gray-500 text-md dark:text-gray-300">
-            Permítanos ayudarlo a subir de nivel su juego de motor de búsqueda,
-            explore nuestras Soluciones de marketing digital para tu negocio.
+            Aumente el tráfico de su sitio web y obtenga más clientes
+            potenciales, con estrategias de marketing digital.
           </p>
         </div>
       </div>
