@@ -9,4 +9,3 @@ export { default as asisst } from "./projects/asisst.svg";
 export { default as calculator } from "./projects/calculator.svg";
 export { default as ascar } from "./projects/ascar.svg";
 export { default as cv } from "./cv.pdf";
-// export { default as about } from "./about-image.svg";
