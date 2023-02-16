@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import "./Projects.css";
 import {
@@ -7,8 +8,14 @@ import {
   asisst,
   ascar,
 } from "../../assets/barrelimg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Projects() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const projects = [
     {
       title: "GeekoShop",
@@ -60,7 +67,13 @@ export default function Projects() {
   ];
 
   return (
-    <div className="bg-white pt-8 pb-20">
+    <div
+      className="bg-white pt-8 pb-20"
+      data-aos="fade-right"
+      data-aos-delay="50"
+      data-aos-duration="800"
+      data-aos-easing="ease-in-out"
+    >
       <div className="dark:bg-gray-800" id="projects">
         <div className="text-center w-full mx-auto pt-4 px-4 sm:px-6 lg:py-12 lg:px-8 z-20">
           <h2 className="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">

@@ -10,7 +10,7 @@ import "./hero.css";
 const navigation = [
   { name: "Inicio", href: "" },
   { name: "Sobre Mi", href: "" },
-  { name: "Servicios", href: "services" },
+  { name: "Servicios", href: "servicesSection" },
   { name: "Proyectos", href: "projects" },
   { name: "Habilidades", href: "" },
 ];

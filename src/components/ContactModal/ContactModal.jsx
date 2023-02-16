@@ -1,4 +1,12 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 export default function ContactModal({ visible, onClose }) {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const handleOnClose = () => {
     onClose();
   };
@@ -8,6 +16,10 @@ export default function ContactModal({ visible, onClose }) {
       <div
         className="relative bg-white rounded-lg shadow dark:bg-gray-700 lg:w-2/4 sm:w-2/4
        xl:w-2/6"
+        data-aos="fade-down"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
       >
         <button
           type="button"
@@ -31,7 +43,7 @@ export default function ContactModal({ visible, onClose }) {
         </button>
         <div className="px-6 py-6 lg:px-8">
           <h3 className="mb-4 text-xl font-medium text-gray-900 dark:text-white">
-            Enviame un mensaje
+            Contactame
           </h3>
           <form className="space-y-6" action="#">
             <div>

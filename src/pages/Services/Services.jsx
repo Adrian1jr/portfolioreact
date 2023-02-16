@@ -1,6 +1,13 @@
+import { useEffect } from "react";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Services() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const services = [
     {
       title: "Aplicaciones Web",
@@ -27,6 +34,10 @@ export default function Services() {
     <div
       className="px-4 py-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
       id="servicesSection"
+      data-aos="fade-left"
+      data-aos-delay="50"
+      data-aos-duration="800"
+      data-aos-easing="ease-in-out"
     >
       <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
         <div>
