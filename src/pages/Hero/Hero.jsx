@@ -8,11 +8,11 @@ import "./hero.css";
 
 //dynamic nav
 const navigation = [
-  { name: "Inicio", href: "home" },
-  { name: "Sobre Mí", href: "about" },
-  { name: "Servicios", href: "servicesSection" },
-  { name: "Proyectos", href: "projects" },
-  { name: "Habilidades", href: "skills" },
+  { name: "Inicio", href: "home", offset: 0 },
+  { name: "Sobre Mí", href: "about", offset: -50 },
+  { name: "Servicios", href: "servicesSection", offset: -300 },
+  { name: "Proyectos", href: "projects", offset: -580 },
+  { name: "Habilidades", href: "skills", offset: -720 },
 ];
 
 export default function Hero() {
@@ -88,6 +88,7 @@ export default function Hero() {
                     <Link
                       to={item.href}
                       smooth={true}
+                      offset={item.offset}
                       key={item.name}
                       className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
                       href={item.href}

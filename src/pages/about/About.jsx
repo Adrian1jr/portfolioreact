@@ -8,7 +8,7 @@ export default function About() {
       data-aos-delay="50"
       data-aos-duration="800"
       data-aos-easing="ease-in-out"
-      className="py-32 sm:pt-32"
+      className="pt-32 sm:pt-32"
     >
       <div className="relative max-w-screen-xl p-4 px-4 mx-auto bg-white dark:bg-gray-800 sm:px-6 lg:px-8 py-26 lg:mt-20">
         <div className="relative">
