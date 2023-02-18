@@ -89,8 +89,8 @@ export default function Services() {
             Diseño Web
           </h3>
           <p className="py-4 text-gray-500 text-md dark:text-gray-300">
-            Abarcando la tecnología de diseño de sitios web con HTML, CSS, JS,
-            contando también con el uso de frameworks y librerías CSS.
+            Abarcando la tecnología de diseño de sitios web con HTML, CSS, JS, y
+            el uso de frameworks y librerías CSS.
           </p>
         </div>
         <div className="w-full px-4 py-4 mt-6 bg-white rounded-lg shadow-lg sm:w-1/2 md:w-full lg:w-1/4 sm:mt-16 md:mt-20 lg:mt-24 dark:bg-gray-800">

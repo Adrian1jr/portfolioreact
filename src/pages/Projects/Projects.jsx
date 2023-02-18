@@ -26,34 +26,20 @@ export default function Projects() {
       link: "https://adrian1jr.github.io/",
     },
     {
-      title: "Pokedex",
-      description: `Pokedex creada con react para visualizar todos los pokemons y ver sus todos sus movimientos.`,
-      image: pokedex,
+      title: "Sistema De Asistencia",
+      description: `Sistema de asistencia para la mejora de la productividad de los
+      empleados.`,
+      image: asisst,
       percentage: "0%",
       link: "",
     },
+
     {
       title: "Tec Shop",
       description: `App de tienda online hecha en Angular JS con carrito de compras y
       checkout.`,
       image: geekoshop,
       percentage: "75%",
-      link: "",
-    },
-    {
-      title: "Calculadora",
-      description: `App de calculadora hecha en React JS con funciones de suma, resta,
-      multiplicación y división.`,
-      image: calculator,
-      percentage: "0%",
-      link: "",
-    },
-    {
-      title: "Sistema De Asistencia",
-      description: `Sistema de asistencia para la mejora de la productividad de los
-      empleados.`,
-      image: asisst,
-      percentage: "0%",
       link: "",
     },
     {
@@ -64,22 +50,36 @@ export default function Projects() {
       percentage: "0%",
       link: "",
     },
+    {
+      title: "Calculadora financiera",
+      description: `App para calcular los gastos e ingresos personales y
+      tener un control de tus finanzas.`,
+      image: calculator,
+      percentage: "0%",
+      link: "",
+    },
+    {
+      title: "Pokedex",
+      description: `Pokedex creada con react para visualizar todos los pokemons y ver sus todos sus movimientos.`,
+      image: pokedex,
+      percentage: "0%",
+      link: "",
+    },
   ];
 
   return (
-    <div
-      className="bg-white pt-8 pb-20"
-      data-aos="fade-right"
-      data-aos-delay="50"
-      data-aos-duration="800"
-      data-aos-easing="ease-in-out"
-    >
-      <div className="dark:bg-gray-800" id="projects">
+    <div className="bg-white pt-8 pb-20" id="projects">
+      <div
+        className="dark:bg-gray-800"
+        data-aos="fade-right"
+        data-aos-delay="50"
+        data-aos-duration="800"
+      >
         <div className="text-center w-full mx-auto pt-4 px-4 sm:px-6 lg:py-12 lg:px-8 z-20">
           <h2 className="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
             <span className="block text-indigo-700">Mis Proyectos</span>
           </h2>
-          <p className="text-l mt-4 max-w-lg mx-auto text-black">
+          <p className="text-gray-700 md:text-lg mb-6 mt-5">
             Aquí podrás observar algunos de mis proyectos más recientes y
             también más antiguos.
           </p>

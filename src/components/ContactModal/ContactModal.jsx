@@ -51,7 +51,7 @@ export default function ContactModal({ visible, onClose }) {
                 htmlFor="password"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >
-                Nombre
+                Nombre Completo
               </label>
               <input
                 type="text"

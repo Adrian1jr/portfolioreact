@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import { logo } from "../../assets/barrelimg";
 
 export default function Footer() {
@@ -17,48 +18,53 @@ export default function Footer() {
           <nav aria-label="Footer Nav" className="mt-12">
             <ul className="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
               <li>
-                <a
-                  className="text-gray-700 transition hover:text-gray-700/75"
-                  href="/"
+                <Link
+                  className="text-gray-700 transition hover:text-gray-700/75 cursor-pointer"
+                  to="home"
+                  smooth={true}
                 >
                   Inicio
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a
-                  className="text-gray-700 transition hover:text-gray-700/75"
-                  href="/"
+                <Link
+                  className="text-gray-700 transition hover:text-gray-700/75 cursor-pointer"
+                  to="about"
+                  smooth={true}
                 >
                   Sobre Mi
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a
-                  className="text-gray-700 transition hover:text-gray-700/75"
-                  href="/"
+                <Link
+                  className="text-gray-700 transition hover:text-gray-700/75 cursor-pointer"
+                  to="servicesSection"
+                  smooth={true}
                 >
                   Servicios
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a
-                  className="text-gray-700 transition hover:text-gray-700/75"
-                  href="/"
+                <Link
+                  className="text-gray-700 transition hover:text-gray-700/75 cursor-pointer"
+                  to="projects"
+                  smooth={true}
                 >
                   Proyectos
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a
-                  className="text-gray-700 transition hover:text-gray-700/75"
-                  href="/"
+                <Link
+                  className="text-gray-700 transition hover:text-gray-700/75 cursor-pointer"
+                  to="#"
+                  smooth={true}
                 >
                   Habilidades
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>

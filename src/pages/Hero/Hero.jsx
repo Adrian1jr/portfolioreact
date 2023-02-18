@@ -8,11 +8,11 @@ import "./hero.css";
 
 //dynamic nav
 const navigation = [
-  { name: "Inicio", href: "" },
-  { name: "Sobre Mi", href: "" },
+  { name: "Inicio", href: "home" },
+  { name: "Sobre Mí", href: "about" },
   { name: "Servicios", href: "servicesSection" },
   { name: "Proyectos", href: "projects" },
-  { name: "Habilidades", href: "" },
+  { name: "Habilidades", href: "skills" },
 ];
 
 export default function Hero() {
@@ -21,7 +21,7 @@ export default function Hero() {
   const handleOnClose = () => setShowMyModal(false);
 
   return (
-    <div className="isolate min-h-screen">
+    <div className="isolate min-h-screen" id="home">
       <div className="px-6 pt-6 lg:px-8">
         <nav className="flex items-center justify-between" aria-label="Global">
           <div className="flex lg:flex-1">
@@ -53,7 +53,8 @@ export default function Hero() {
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <a
-              href="#"
+              href="https://github.com/Adrian1jr"
+              target="_blank"
               className="text-sm font-semibold leading-6 text-gray-900"
             >
               Github <span aria-hidden="true">&rarr;</span>
@@ -105,7 +106,11 @@ export default function Hero() {
         <div className="relative px-6 lg:px-8">
           <div className="mx-auto max-w-2xl py-24 sm:py-24 lg:py-40">
             <div className="mb-8 flex justify-center">
-              <img src={avatar} alt="avatar" />
+              <img
+                src={avatar}
+                alt="avatar"
+                className="w-3/4 md:w-6/12 lg:w-7/12"
+              />
             </div>
             <div className="text-center">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
@@ -137,7 +142,7 @@ export default function Hero() {
             </div>
             {/* Scroll down */}
             <Link
-              to="servicesSection"
+              to="about"
               smooth={true}
               aria-label="Scroll down"
               className="flex items-center justify-center w-10 h-10 mx-auto text-gray-600 hover:text-deep-purple-accent-400 hover:border-deep-purple-accent-400 duration-300 transform border border-gray-400 rounded-full hover:shadow hover:scale-110 cursor-pointer sm:mt-12 mt-10"

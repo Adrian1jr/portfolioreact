@@ -1,3 +1,7 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 export default function ProjectCard({
   title,
   description,
@@ -5,8 +9,17 @@ export default function ProjectCard({
   percentage,
   link,
 }) {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
-    <div className="block rounded-xl border border-gray-100 p-8 shadow-lg">
+    <div
+      className="block rounded-xl border border-gray-100 p-8 shadow-lg"
+      data-aos="zoom-in-up"
+      data-aos-delay="50"
+      data-aos-duration="800"
+    >
       <div className="flex justify-between">
         <img src={image} alt="app icon" className="w-7" />
 
