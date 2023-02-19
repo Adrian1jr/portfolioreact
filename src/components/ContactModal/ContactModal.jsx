@@ -51,21 +51,42 @@ export default function ContactModal() {
       .then(
         (result) => {
           if (result.status === 200) {
-            Swal.fire({
+            const Toast = Swal.mixin({
+              toast: true,
+              position: "top-end",
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true,
+              didOpen: (toast) => {
+                toast.addEventListener("mouseenter", Swal.stopTimer);
+                toast.addEventListener("mouseleave", Swal.resumeTimer);
+              },
+            });
+
+            Toast.fire({
               icon: "success",
               title: "Mensaje Enviado",
-              text: "Me pondré en contacto contigo lo antes posible",
-              timer: 3000,
             });
+
             handleClose();
           }
         },
         (error) => {
-          Swal.fire({
-            icon: "error",
-            title: `${error.text}`,
-            text: "Algo salió mal, intenta de nuevo",
+          const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
             timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.addEventListener("mouseenter", Swal.stopTimer);
+              toast.addEventListener("mouseleave", Swal.resumeTimer);
+            },
+          });
+
+          Toast.fire({
+            icon: "error",
+            title: `Algo salió mal, intenta de nuevo: ${error}`,
           });
 
           handleClose();
