@@ -1,8 +1,9 @@
-import * as React from "react";
+import React, { useRef } from "react";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
+import emailjs from "emailjs-com";
+import Swal from "sweetalert2";
+import "./ContactModal.css";
 
 const style = {
   position: "absolute",
@@ -18,9 +19,59 @@ const style = {
 };
 
 export default function ContactModal() {
+  const form = useRef();
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+    const sendEmailText = document.querySelector("#sendEmailText");
+    sendEmailText.innerHTML = "";
+    const div = document.createElement("div");
+    div.className = "flex items-center justify-center";
+    const div2 = document.createElement("div");
+    div2.className =
+      "h-5 w-5 border-t-transparent border-solid animate-spin rounded-full border-white border-4";
+    const div3 = document.createElement("div");
+    div3.className = "ml-2";
+    div3.innerText = "Enviando...";
+    div.appendChild(div2);
+    div.appendChild(div3);
+    sendEmailText.appendChild(div);
+
+    emailjs
+      .sendForm(
+        "service_s4a81it",
+        "template_q3xahqr",
+        e.target,
+        "ETtSsU7gGQQNNOAAT"
+      )
+      .then(
+        (result) => {
+          if (result.status === 200) {
+            Swal.fire({
+              icon: "success",
+              title: "Mensaje Enviado",
+              text: "Me pondré en contacto contigo lo antes posible",
+              timer: 3000,
+            });
+            handleClose();
+          }
+        },
+        (error) => {
+          Swal.fire({
+            icon: "error",
+            title: `${error.text}`,
+            text: "Algo salió mal, intenta de nuevo",
+            timer: 3000,
+          });
+
+          handleClose();
+        }
+      );
+  }
 
   return (
     <div>
@@ -61,7 +112,12 @@ export default function ContactModal() {
           <h3 className="mb-4 text-xl font-medium text-gray-900 dark:text-white text-center">
             Contactame
           </h3>
-          <form className="space-y-6" action="#">
+          <form
+            className="space-y-6"
+            action="#"
+            ref={form}
+            onSubmit={sendEmail}
+          >
             <div>
               <label
                 htmlFor="name"
@@ -71,6 +127,7 @@ export default function ContactModal() {
               </label>
               <input
                 type="text"
+                name="from_name"
                 placeholder="Escribe tu nombre"
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
               />
@@ -85,6 +142,7 @@ export default function ContactModal() {
               </label>
               <input
                 type="text"
+                name="from_email"
                 placeholder="Ex: jhon@test.com"
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
               />
@@ -118,6 +176,7 @@ export default function ContactModal() {
               </label>
               <textarea
                 type="text"
+                name="html_message"
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                 placeholder="Escribe tu mensaje"
               />
@@ -127,8 +186,9 @@ export default function ContactModal() {
               type="submit"
               className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
-              Enviar
+              <span id="sendEmailText">Enviar</span>
             </button>
+
             <div className="text-sm font-medium text-gray-500 dark:text-gray-300 text-center">
               Telefono:{" "}
               <a
