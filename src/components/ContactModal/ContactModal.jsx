@@ -53,7 +53,7 @@ export default function ContactModal() {
           if (result.status === 200) {
             const Toast = Swal.mixin({
               toast: true,
-              position: "top-end",
+              position: "center",
               showConfirmButton: false,
               timer: 3000,
               timerProgressBar: true,
@@ -74,7 +74,7 @@ export default function ContactModal() {
         (error) => {
           const Toast = Swal.mixin({
             toast: true,
-            position: "top-end",
+            position: "center",
             showConfirmButton: false,
             timer: 3000,
             timerProgressBar: true,
@@ -192,7 +192,7 @@ export default function ContactModal() {
                 Mensaje
               </label>
               <textarea
-                type="text"
+                type="email"
                 name="html_message"
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                 placeholder="Escribe tu mensaje"
