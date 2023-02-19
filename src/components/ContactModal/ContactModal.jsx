@@ -1,54 +1,70 @@
-import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import Modal from "@mui/material/Modal";
 
-export default function ContactModal({ visible, onClose }) {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  border: "none",
+  borderRadius: "5px",
+  boxShadow: 24,
+  p: 4,
+};
 
-  const handleOnClose = () => {
-    onClose();
-  };
-  if (!visible) return null;
+export default function ContactModal() {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex items-center justify-center z-50">
-      <div
-        className="relative bg-white rounded-lg shadow dark:bg-gray-700 lg:w-2/4 sm:w-2/4
-       xl:w-2/6"
-        data-aos="fade-down"
-        data-aos-delay="50"
-        data-aos-duration="1000"
-        data-aos-easing="ease-in-out"
+    <div>
+      {" "}
+      <button
+        className="rounded-md bg-indigo-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+        type="button"
+        onClick={handleOpen}
       >
-        <button
-          type="button"
-          className="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
-          data-modal-hide="authentication-modal"
-          onClick={() => handleOnClose()}
-        >
-          <svg
-            aria-hidden="true"
-            className="w-5 h-5"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+        Contactame
+      </button>
+      <Modal
+        open={open}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <button
+            type="button"
+            className="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+            data-modal-hide="authentication-modal"
+            onClick={() => handleClose()}
           >
-            <path
-              fillRule="evenodd"
-              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-              clipRule="evenodd"
-            ></path>
-          </svg>
-        </button>
-        <div className="px-6 py-6 lg:px-8">
-          <h3 className="mb-4 text-xl font-medium text-gray-900 dark:text-white">
+            <svg
+              aria-hidden="true"
+              className="w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fillRule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clipRule="evenodd"
+              ></path>
+            </svg>
+          </button>
+          <h3 className="mb-4 text-xl font-medium text-gray-900 dark:text-white text-center">
             Contactame
           </h3>
           <form className="space-y-6" action="#">
             <div>
               <label
-                htmlFor="password"
+                htmlFor="name"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >
                 Nombre Completo
@@ -60,7 +76,20 @@ export default function ContactModal({ visible, onClose }) {
               />
             </div>
 
-            {/* Make a select for the services */}
+            <div>
+              <label
+                htmlFor="email"
+                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >
+                Email
+              </label>
+              <input
+                type="text"
+                placeholder="Ex: jhon@test.com"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+              />
+            </div>
+
             <div>
               <label
                 htmlFor="email"
@@ -100,7 +129,7 @@ export default function ContactModal({ visible, onClose }) {
             >
               Enviar
             </button>
-            <div className="text-sm font-medium text-gray-500 dark:text-gray-300">
+            <div className="text-sm font-medium text-gray-500 dark:text-gray-300 text-center">
               Telefono:{" "}
               <a
                 href="#"
@@ -110,8 +139,8 @@ export default function ContactModal({ visible, onClose }) {
               </a>
             </div>
           </form>
-        </div>
-      </div>
+        </Box>
+      </Modal>
     </div>
   );
 }

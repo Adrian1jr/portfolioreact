@@ -10,8 +10,8 @@ export default function About() {
       data-aos-easing="ease-in-out"
       className="pt-32 sm:pt-32"
     >
-      <div className="relative max-w-screen-xl p-4 px-4 mx-auto bg-white dark:bg-gray-800 sm:px-6 lg:px-8 py-26 lg:mt-20">
-        <div className="relative">
+      <div className=" max-w-screen-xl p-4 px-4 mx-auto bg-white dark:bg-gray-800 sm:px-6 lg:px-8 py-26 lg:mt-20">
+        <div>
           <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
             <div className="ml-auto lg:col-start-2 lg:max-w-2xl">
               <p className="text-base font-semibold leading-6 text-indigo-500 uppercase">
@@ -33,8 +33,8 @@ export default function About() {
                 familiarizado con frameworks como <b>Nest y Node JS</b>.
               </p>
             </div>
-            <div className="relative mt-10 lg:-mx-4 relative-20 lg:mt-0 lg:col-start-1">
-              <div className="relative space-y-4">
+            <div className=" mt-10 lg:-mx-4 relative-20 lg:mt-0 lg:col-start-1">
+              <div className=" space-y-4">
                 <div className="flex items-end justify-center space-x-6">
                   <img
                     className="w-96 lg:w-5/6"
@@ -50,7 +50,7 @@ export default function About() {
       </div>
 
       {/* Feature */}
-      <section className="mb-32 text-gray-800 text-center relative max-w-screen-xl p-4 px-4 mx-auto bg-white dark:bg-gray-800 sm:px-6 lg:px-8 py-26 lg:mt-20">
+      <section className="mb-32 text-gray-800 text-center max-w-screen-xl p-4 px-4 mx-auto bg-white dark:bg-gray-800 sm:px-6 lg:px-8 py-26 lg:mt-20">
         <div className="flex justify-center">
           <div className="text-center max-w-[700px]">
             <h2 className="text-3xl font-bold mb-6 text-center">
