@@ -10,3 +10,4 @@ export { default as calculator } from "./projects/calculator.svg";
 export { default as ascar } from "./projects/ascar.svg";
 export { default as cv } from "./cv.pdf";
 export { default as about } from "./about.svg";
+export { default as linkedinicon } from "./linkedin.jfif";

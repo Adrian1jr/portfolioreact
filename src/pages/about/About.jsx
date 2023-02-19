@@ -18,14 +18,14 @@ export default function About() {
                 Sobre Mí
               </p>
               <h4 className="mt-2 text-2xl font-extrabold leading-8 text-gray-900 dark:text-white sm:text-3xl sm:leading-9">
-                Adrian Tapia Herrera - Front End Developer
+                Hola! Soy Adrian Tapia Herrera 👋
               </h4>
               <p className="mt-4 text-lg leading-6 text-gray-500 dark:text-gray-300">
-                Mi nombre es Adrian Tapia Herrera y soy un desarrollador front
-                end con experiencia en <b>Angular y React</b>. He trabajado en
-                varios proyectos utilizando estas tecnologías, y tengo una buena
-                comprensión de cómo integrarlas para crear aplicaciones web
-                robustas y escalables.
+                Desarrollador <b>front end</b> con experiencia en {""}
+                <b>Angular y React</b>. He trabajado en varios proyectos
+                utilizando estas tecnologías, y tengo una buena comprensión de
+                cómo integrarlas para crear aplicaciones web robustas y
+                escalables.
               </p>
 
               <p className="mt-4 text-lg leading-6 text-gray-500 dark:text-gray-300">
