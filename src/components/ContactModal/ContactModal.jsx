@@ -74,7 +74,7 @@ export default function ContactModal() {
   }
 
   return (
-    <div>
+    <>
       {" "}
       <button
         className="rounded-md bg-indigo-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
@@ -83,11 +83,7 @@ export default function ContactModal() {
       >
         Contactame
       </button>
-      <Modal
-        open={open}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
+      <Modal open={open}>
         <Box sx={style}>
           <button
             type="button"
@@ -201,6 +197,6 @@ export default function ContactModal() {
           </form>
         </Box>
       </Modal>
-    </div>
+    </>
   );
 }

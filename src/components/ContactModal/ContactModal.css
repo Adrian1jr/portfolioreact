@@ -1,3 +1,9 @@
 .swal2-container {
   z-index: 20000 !important;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .MuiBox-root {
+    width: 100% !important;
+  }
+}
