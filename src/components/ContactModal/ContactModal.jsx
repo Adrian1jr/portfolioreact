@@ -53,7 +53,7 @@ export default function ContactModal() {
           if (result.status === 200) {
             const Toast = Swal.mixin({
               toast: true,
-              position: "center",
+              position: "top-end",
               showConfirmButton: false,
               timer: 3000,
               timerProgressBar: true,
@@ -74,7 +74,7 @@ export default function ContactModal() {
         (error) => {
           const Toast = Swal.mixin({
             toast: true,
-            position: "center",
+            position: "top-end",
             showConfirmButton: false,
             timer: 3000,
             timerProgressBar: true,

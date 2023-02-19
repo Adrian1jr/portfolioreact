@@ -34,7 +34,7 @@ export default function Services() {
     <div
       className="px-4 py-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
       id="servicesSection"
-      data-aos="fade-left"
+      data-aos="fade-right"
       data-aos-delay="50"
       data-aos-duration="800"
       data-aos-easing="ease-in-out"
