@@ -105,7 +105,7 @@ export default function Hero() {
       </div>
       <main>
         <div className="relative px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl py-24 sm:py-24 lg:py-40">
+          <div className="mx-auto max-w-2xl py-24 sm:py-24 lg:py-20">
             <div className="mb-8 flex justify-center">
               <img
                 src={avatar}
