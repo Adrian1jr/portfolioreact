@@ -26,12 +26,12 @@ export default function Projects() {
       link: "https://adrian1jr.github.io/",
     },
     {
-      title: "Sistema De Asistencia",
-      description: `Sistema de asistencia para la mejora de la productividad de los
-      empleados.`,
-      image: asisst,
-      percentage: "0%",
-      link: "",
+      title: "Ascar Sistemas",
+      description: `Pagina Web de Ascar Sistemas, empresa dedicada a la venta de
+      productos de informática y sistemas.`,
+      image: ascar,
+      percentage: "50%",
+      link: "https://ascarsistemas.com/",
     },
 
     {
@@ -43,10 +43,10 @@ export default function Projects() {
       link: "",
     },
     {
-      title: "Ascar Sistemas",
-      description: `Pagina Web de Ascar Sistemas, empresa dedicada a la venta de
-      productos de informática y sistemas.`,
-      image: ascar,
+      title: "Sistema De Asistencia",
+      description: `Sistema de asistencia para la mejora de la productividad de los
+      empleados.`,
+      image: asisst,
       percentage: "0%",
       link: "",
     },
