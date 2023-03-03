@@ -30,7 +30,7 @@ export default function Projects() {
       description: `Pagina Web de Ascar Sistemas, empresa dedicada a la venta de
       productos de informática y sistemas.`,
       image: ascar,
-      percentage: "50%",
+      percentage: "100%",
       link: "https://ascarsistemas.com/",
     },
 
